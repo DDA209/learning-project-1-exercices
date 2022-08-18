@@ -12,11 +12,7 @@ export class CounterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onClickAddOne() {
-    this.count++;
-  }
-
-  onClickRaz() {
-    this.count = 0;
+  addOne() {
+    this.count + this.count;
   }
 }
