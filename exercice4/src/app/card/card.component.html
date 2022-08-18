@@ -1,1 +1,9 @@
-<p>card works!</p>
+<div class="card text-center m-5 shadow">
+  <div class="card-body">
+    <h5 class="card-title">{{animalName}}</h5>
+    <img class="card-img-top" src={{animalPicture}} alt="Card image cap">
+  </div>
+  <div class="card-footer text-muted">
+    <button class="btn btn-secondary" type="button" (click)="onButtonClick()">Son cri</button>
+  </div>
+</div>
