@@ -1,0 +1,2 @@
+<app-card [title]="car.brand + ' - ' + car.model" [description]="car.description"></app-card>
+<app-table [cars]="cars" (newCarSelectedEmitter)="receiveCarId($event)"></app-table>
