@@ -9,7 +9,7 @@ export class GridViewComponent implements OnInit {
   rowCount: number = 5;
   colCount: number = 4;
 
-  grid: any = [];
+  grid: Array<any> = [];
 
   constructor() {
     for (let i = 0; i < this.rowCount; i++) {
@@ -19,7 +19,6 @@ export class GridViewComponent implements OnInit {
         this.grid[i].push(`${i}${j}`);
       }
     }
-    console.log('grid.length', this.grid.length);
   }
 
   ngOnInit(): void {}

@@ -10,7 +10,5 @@ export class CardComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(' content >>>', this.content);
-  }
+  ngOnInit(): void {}
 }

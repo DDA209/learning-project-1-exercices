@@ -6,11 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./row-item.component.css'],
 })
 export class RowItemComponent implements OnInit {
-  @Input() row: any;
+  @Input() row!: Array<string>;
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(' this.row >>>', this.row);
-  }
+  ngOnInit(): void {}
 }

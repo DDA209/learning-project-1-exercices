@@ -6,11 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./col-item.component.css'],
 })
 export class ColItemComponent implements OnInit {
-  @Input() col: any;
+  @Input() col!: string;
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(' col >>>', this.col);
-  }
+  ngOnInit(): void {}
 }
