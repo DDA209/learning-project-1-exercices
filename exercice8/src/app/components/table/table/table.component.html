@@ -1,0 +1,14 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">N° d'identification</th>
+      <th scope="col">Nom du produit</th>
+      <th scope="col">Disponibilité</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr app-line *ngFor="let product of products; let index = index" [product]="product" [index]="index">
+    </tr>
+  </tbody>
+</table>
