@@ -1,0 +1,15 @@
+<table class="table m-5">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Psidinyme</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr app-line *ngFor="let user of users; let index = index" [user]="user"
+      [ngStyle]="{backgroundColor: setColor(index)}">
+    </tr>
+    <!--  *ngFor="let user of users" user={{user}} -->
+  </tbody>
+</table>

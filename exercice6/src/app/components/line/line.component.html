@@ -1,0 +1,9 @@
+<th scope="row">{{user.id}}</th>
+
+<td>
+  <div *ngIf="user.username==='Robert'; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>Bob</ng-template>
+  <ng-template #elseBlock>{{user.username}}</ng-template>
+</td>
+
+<td>{{user.email}}</td>
