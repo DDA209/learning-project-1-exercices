@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class LineComponent implements OnInit {
 
   nextStatus!: [string, string];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnChanges(): void {
     this.nextStatus =
@@ -26,5 +27,10 @@ export class LineComponent implements OnInit {
 
   onClickChangeStatus(index: number) {
     this.productService.changeProductStatus(index, this.nextStatus[0]);
+  }
+
+  onClickShowDetail(index: number): void {
+    console.log('Clic detail');
+    this.router.navigate([`/product/${index}`]);
   }
 }

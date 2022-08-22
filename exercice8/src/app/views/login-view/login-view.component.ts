@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-login-view',
@@ -6,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-view.component.css'],
 })
 export class LoginViewComponent implements OnInit {
-  constructor() {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
 
   onClickSignIn(): void {
-    console.log('CLICK LOGIN');
+    console.log('CLIC singn in');
+    this.authService.login().then(() => {
+      this.router.navigateByUrl('/').catch(() => {});
+    });
   }
 }

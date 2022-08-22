@@ -10,6 +10,9 @@ import { ErrorViewComponent } from './views/error-view/error-view.component';
 import { HomeViewComponent } from './views/home-view/home-view.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginViewComponent } from './views/login-view/login-view.component';
+import { AuthService } from './services/auth/auth.service';
+import { AuthGuardService } from './services/gards/auth-guard.service';
+import { ProductViewComponent } from './views/product-view/product-view.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,10 @@ import { LoginViewComponent } from './views/login-view/login-view.component';
     ErrorViewComponent,
     HomeViewComponent,
     LoginViewComponent,
+    ProductViewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [ProductService],
+  providers: [ProductService, AuthService, AuthGuardService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
